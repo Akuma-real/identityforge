@@ -193,26 +193,37 @@
 .gha-settings input[type="password"] { -webkit-text-security: disc; }
 
 .gha-toast {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 2147483648;
-  background: var(--green);
-  color: var(--bg);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 13px;
+  position: static;
+  margin: 0 8px;
+  max-height: 0;
+  box-sizing: border-box;
+  background: var(--bg2);
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: 600;
+  line-height: 1.4;
   opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.2s ease;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, max-height 0.18s ease, padding 0.18s ease, margin 0.18s ease;
   pointer-events: none;
-  max-width: 400px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.gha-toast.show { opacity: 1; transform: translateY(0); }
-.gha-toast.error { background: var(--red); }
+.gha-toast.show {
+  max-height: 72px;
+  margin-top: 8px;
+  padding: 7px 10px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.gha-toast.error {
+  background: var(--bg2);
+  color: var(--red);
+  border-color: var(--red);
+}
 
 .gha-spinner {
   display: inline-block;
