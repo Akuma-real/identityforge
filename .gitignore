@@ -1,2 +1,43 @@
+# Local agent / IDE state
+.agents/
+.claude/
+.codex/
+.vscode/
+.idea/
+
+# Secrets and local configuration
+.env
+.env.*
+*.local
+*.local.*
+
+# Dependencies
 node_modules/
-package-lock.json
+
+# Build and test output
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary files
+.cache/
+.tmp/
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
