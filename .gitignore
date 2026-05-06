@@ -14,9 +14,17 @@
 # Dependencies
 node_modules/
 
-# Build and test output
-dist/
+# Package manager
+package-lock.json
+yarn.lock
+.pnpm-store/
+
+# Build output
+/dist/*
+!/dist/identityforge.user.js
 build/
+
+# TypeScript / test output
 coverage/
 *.tsbuildinfo
 
